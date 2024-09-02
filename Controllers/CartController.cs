@@ -69,7 +69,6 @@ public class CartController : Controller
         var cartItems = db.Carts.Where(c => c.suser == username && c.IsPurchased == null).ToList();
         if (cartItems.Any())
         {
-            // Generate a random order ID
             var randomOrderId = Guid.NewGuid().ToString();
 
             foreach (var item in cartItems)
@@ -83,7 +82,7 @@ public class CartController : Controller
 
             // Pass the order ID and amount to the view
             ViewBag.OrderId = randomOrderId;
-            ViewBag.Amount = cartItems.Sum(c => c.Price) * 100; // Total amount in paise
+            ViewBag.Amount = cartItems.Sum(c => c.Price) * 100; // Total amount in paise 
             return View("RazorpayCheckout");
         }
 

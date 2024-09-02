@@ -11,7 +11,7 @@
                 <h5 class="card-title">@item.Name</h5>
                 <p class="card-text">@item.Description</p>
                 <p class="card-price">@item.Price</p>
-                <a href="@Url.Action("Watch", "Test", new { id = item.cart_id })" class="btn btn-primary">Watch Now</a>
+                <a href="@Url.Action("Watch", "Watch", new { id = item.cart_id })" class="btn btn-primary">Watch Now</a>
             </div>
         </div>
     }

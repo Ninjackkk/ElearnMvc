@@ -57,7 +57,7 @@ namespace onl.Controllers
                     HttpContext.Session.SetString("userid", data.Id.ToString());
 
 
-                    return RedirectToAction("Index", "Test");
+                    return RedirectToAction("Index", "Allcourses");
                 }
                 else
                 {
@@ -70,6 +70,14 @@ namespace onl.Controllers
             }
             return View();
         }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear(); // Clears all session data
+            return RedirectToAction("SignIn");
+        }
+
     }
+
 }
 

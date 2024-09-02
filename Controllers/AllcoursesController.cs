@@ -4,11 +4,11 @@ using onl.Models;
 
 namespace onl.Controllers
 {
-    public class TestController : Controller
+    public class AllcoursesController : Controller
     {
         private readonly ApplicationDbContext db;
 
-        public TestController(ApplicationDbContext db)
+        public AllcoursesController(ApplicationDbContext db)
         {
             this.db = db;
         }
